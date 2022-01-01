@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y:scroll;
+    background-color: hsl(240, 78%, 98%);
+    background-image: url('images/bg-top.svg'), url('images/bg-bottom.svg');
+    background-position: right top, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    font-size: 1.2rem;
+}
+html,body{
+    font-family: 'Montserrat', sans-serif;
+}
+label{
+    color: hsl(234, 14%, 74%);
+    font-size: 1rem;
+}
+.lite-text{
+    color: hsl(233, 13%, 49%);
+}
+.gray-text{
+    color: hsl(233, 13%, 49%);
+}
+.white-text{
+    color: hsl(240, 78%, 98%);
+}
+.pageHeading{
+    margin-top: 75px !important;
+}
+.center{
+    width: fit-content;
+    display: block;
+    margin:35px auto;
+}
+.custom-toggle{
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius:35px;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    position: relative;
+    width: 60px;
+    height:35px;
+    margin: 0 25px;
+}
+.custom-toggle:hover{
+    filter: brightness(130%);
+}
+#toggle{
+    opacity:0;
+    cursor: pointer;
+}
+.toggle-circle{
+    position: absolute;
+    top: 4px;
+    right:4px;
+    width: 27px;
+    height: 27px;
+    background-color: white;
+    border-radius: 50%;
+    transition: right .25s ease-in-out;
+    -webkit-transition: right .35s;
+    transition: right .35s;
+}
+#toggle:checked~.toggle-circle{
+    right:29px;
+}
+.toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards-cont{
+    box-sizing: border-box;
+    margin-top:65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    margin:0;
+    width:350px;
+    border-radius:7px;
+    box-sizing: border-box;
+    padding: 15px 15px 30px 15px;
+    text-align: center;
+    display: inline-block;
+    transition: width .35s;
+}
+.card.basic,.card.master{
+    background-color: white;
+    box-shadow: hsl(235, 79%, 91%) 0px 7px 29px 0px;
+}
+.professional{
+    z-index: 10;
+    padding:35px 15px 50px 15px;
+    background-image: linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+}
+button{
+    all:unset;
+    cursor: pointer;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    padding:15px 0;
+    font-size:.85rem;
+    box-sizing: border-box;
+    width: 95%;
+    margin: 15px 0 0 0;
+    text-align: center;
+    border-radius: 7px;
+    color: white;
+}
+.basic button,.master button{
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+}
+.basic button:hover,.master button:hover{
+    background-image: none;
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+    padding: 14px 0;
+    border:1px solid hsl(233, 13%, 49%);
+}
+.professional button{
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+}
+.professional button:hover{
+    background-color: transparent;
+    color: white;
+    padding: 14px 0;
+    border:1px solid white;
+}
+.card .title{
+    font-size: 1.1rem;
+}
+.price{
+    font-size:4rem;
+    margin-block-start:5px;
+    margin-block-end:30px;
+    color: white;
+}
+.card.basic .price,.card.master .price{
+    color: hsl(232, 13%, 33%);
+}
+.price span{
+    font-size:2.35rem;
+    margin-right:10px;
+    position: relative;
+    bottom:7px;
+}
+.features{
+    width: 90%;
+    margin:0px auto 20px;
+    box-sizing: border-box;
+}
+.feature{
+    margin-block-end: 0;
+    margin-block-start: 0;
+    font-size:.95rem;
+    padding:17px 0;
+    border-top: 1px solid  hsl(231, 11%, 87%);
+}
+.feature:last-child{
+    border-bottom: 1px solid  hsl(231, 11%, 87%);
+}
+.professional .feature{
+    border-top: 1px solid  rgb(161, 166, 255);
+}
+.professional .feature:last-child{
+    border-bottom: 1px solid  rgb(161, 166, 255);
+}
+@media only screen and (max-width:1125px){
+    .card{
+        width:300px;
+    }
+}
+@media only screen and (max-width:980px){
+    body{
+        background-position:  right -200px top, left -100px bottom;
+        
+    }
+    .cards-cont{
+        flex-direction: column;
+        gap:25px;
+        margin-bottom: 50px;
+    }
+    .professional{
+        padding: 15px 15px 30px 15px;
+    }
+    .card{
+        width:85%;
+        max-width:375px;
+    }
+    .price{
+        font-size:3rem;
+    }
+}

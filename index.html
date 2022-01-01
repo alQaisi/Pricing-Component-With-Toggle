@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">  
+  <link rel="stylesheet" href="style.css">
+  <title>Pricing Components With Toggle</title>
+</head>
+<body>
+
+  <h1 class="lite-text center pageHeading">Our Pricing</h1>
+  <div class="toggle center">
+    <label for="toggle">Annually</label>
+    <label for="toggle" class="custom-toggle">
+      <input type="checkbox" name="toggle" id="toggle">
+      <span class="toggle-circle"></span>
+    </label>
+    <label for="toggle">Monthly</label>
+  </div>
+  <div class="cards-cont">
+    <!--Card 1-->
+    <div class="card basic">
+      <h3 class="title gray-text">Basic</h3>
+      <h1 class="price "><span>&dollar;</span>19.99</h1>
+      <div class="features">
+        <p class="feature gray-text">500 GB Storage</p>
+        <p class="feature gray-text">2 Users Allowed</p>
+        <p class="feature gray-text">Send up to 3 GB</p>
+      </div>
+      <button>Learn more</button>
+    </div>
+    <!--Card 2-->
+    <div class="card professional">
+      <h3 class="title white-text">Professional</h3>
+      <h1 class="price white-text"><span>&dollar;</span>24.99</h1>
+      <div class="features">
+        <p class="feature white-text">1 TB Storage</p>
+        <p class="feature white-text">5 Users Allowed</p>
+        <p class="feature white-text">Send up to 10 GB</p>
+      </div>
+      <button>Learn more</button>
+    </div>
+    <!--Card 3-->
+    <div class="card master">
+      <h3 class="title gray-text">Master</h3>
+      <h1 class="price "><span>&dollar;</span>39.99</h1>
+      <div class="features">
+        <p class="feature gray-text">2 TB Storage</p>
+        <p class="feature gray-text">10 Users Allowed</p>
+        <p class="feature gray-text">Send up to 20 GB</p>
+      </div>
+      <button>Learn more</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
